@@ -1,0 +1,14 @@
+.liste1:hover{
+    color: red;
+}
+.liste3:hover{
+    color: rgb(52, 196, 52);
+}
+.liste4:hover{
+    color: blue;
+}
+
+ul li {
+    font-style: italic;
+    
+}

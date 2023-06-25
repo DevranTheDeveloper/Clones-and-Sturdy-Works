@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Moirai+One&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.cerceve {
+    border: 2px solid black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    margin: 1rem;
+    background-image: linear-gradient(rgb(94, 0, 0), rgb(194, 164, 68), rgb(190, 0, 0));
+}
+.baslik {
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    font-size: 2rem;
+    font-weight: bolder;
+    display: inline;
+    text-shadow: 2px 2px 20px black;
+}
+.baslik h1::first-letter {
+    color: rgb(190, 0, 0);
+}
+.oyuncu h2 {
+    text-align: left;
+    display: inline;
+    font-family: 'Bungee', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 10px;
+    text-shadow: 2px 2px 20px black;
+}
+.oyuncu li {
+    font-family: 'Bungee', cursive;
+    text-align: left;
+    color: rgb(211, 0, 0);
+    text-shadow: 2px 2px 20px black;
+}
+.oyuncu li:hover {
+    color: rgb(190, 0, 0);
+}
+.gorsel {
+    justify-content: center;
+    display: inline;
+    margin-left: 32%;
+    box-shadow: 5px 5px 20px black;
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+}
+.aciklama {
+    width: 500px;
+    margin-left: 1rem;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.video iframe {
+    margin: 0 1rem 0 1rem;
+    display: inline;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+}
+.buton {
+    width: 610px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.buton button {
+    background-color: rgb(211, 0, 0);
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+}
+.buton p {
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    font-size: 2rem;
+    margin: 0 5rem 0 5rem;
+}
+.buton button:hover {
+    background-color: rgb(190, 0, 0);
+}

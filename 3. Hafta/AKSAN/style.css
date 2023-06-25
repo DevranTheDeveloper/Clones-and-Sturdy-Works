@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.801)), url(aksan-hero-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.carousel-item {
+    text-align: center;
+    margin-top: 26%;
+    color: white;
+    font-size: 20px;
+    padding: 3rem;
+}
+.carousel-item p{
+    color: white;
+}
+nav {
+    z-index: 999;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+ul li {
+    list-style: none;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.sc li:hover {
+    color: gray !important;
+}
+.sc li {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.lg {
+    margin-left: 100px;
+}
+.lg li {
+    color: white;
+}
+.img {
+    display: inline;
+}
+.text {
+    text-align: center;
+    padding-left: 650px;
+    padding-right: 650px;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ .text h4, h4{
+    color: brown;
+    font-weight: 700;
+
+}
+.itext h4{
+    font-weight: 700;
+}
+.itext {
+    background:linear-gradient(to top, rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.801)), url(aksan-hero-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-left: 650px;
+    padding-right: 650px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.itext p a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 300ms;
+    font-size: 16px;
+}
+.itext p a:hover {
+    text-decoration: underline;
+    font-size: 22px;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+}
+.box img {
+    width: 100%;
+    height: 250px; 
+    
+}
+h4 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+small {
+    font-weight: 500;
+    color: rgb(192, 192, 192);
+}
+.baslik {
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+    transition: all 300ms;
+}
+.baslik:hover {
+    color: brown;
+}
+p {
+    font-weight: 400;
+    color: gray;
+}
+footer {
+    background: rgb(6, 7, 29);
+}
+footer p{
+     font-size: 12px;
+     font-weight: 800;
+}
+
+footer ul li {
+    font-size: 12px;
+     font-weight: 800;
+     text-decoration: none;
+     color: whitesmoke;
+}
+footer ul li a{
+     text-decoration: none;
+}

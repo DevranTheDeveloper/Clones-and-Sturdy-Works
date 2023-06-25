@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 0px solid black;
+        width: 500px;
+        height: 500px;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, rgba(255,0,200,1), rgba(255, 100, 201, 0.527));
+        animation: mymove 20s infinite;
+        text-align: center;
+        
+        
+    }
+
+    @keyframes mymove {
+        50% {
+            transform: rotate(0deg);
+            border-radius: 0px 50px 0px 50px;
+            background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));
+            
+        }
+    }
+    
+</style>
+<body>
+
+    <div class="box">
+        <p>yazi</p>
+    </div>
+    
+</body>
+</html>

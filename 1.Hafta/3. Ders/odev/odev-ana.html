@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <style>
+
+        .image:hover {
+            animation: mymove2 1s none;
+        }
+
+        .baglanti:hover {
+            color: red;
+            
+        }
+
+        .deneme {
+            font-size: x-large;
+            font-family: Impact, Haettenschweiler, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            animation: mymove 5s infinite;
+            animation-direction: reverse;
+            scale: 1 1;
+        }
+
+        @keyframes mymove {
+            100% {
+                transform: rotate(0deg);
+                color: burlywood;
+                font-style: italic;
+                transform: rotateX(360deg)
+                            rotateY(360deg)
+                            rotateZ(360deg);
+            }
+        }
+
+        @keyframes mymove2 {
+            20% {
+                transform: rotate(10deg);
+            }
+        }
+        .nav {
+            border: 3px solid gray;
+            font-size: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Benim Web Sitem</h1>
+<div class="nav">
+    
+        <a href="odev-ana.html"><p>Anasayfa</p></a>
+        <a href="https://neosyazilim.com/haberler/"><p>Hakkında</p></a>
+        <a href="https://neosyazilim.com/iletisim/"><p>İletişim</p></a>
+    
+</div>
+    <hr>
+    <h2>Neos Yazılım Front-End Grubu</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum blanditiis, hic, atque at consequatur recusandae officiis, cumque nemo nobis aperiam omnis adipisci? Aliquam quis placeat temporibus magnam necessitatibus aperiam odio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos quaerat quia numquam similique doloremque est neque exercitationem fugiat, nemo voluptatibus earum asperiores hic enim repellendus, nam natus. Odit, ex?</p>
+    <div>
+        <img class="image" width="420px" height="320px" src="https://media.istockphoto.com/id/973159366/tr/foto%C4%9Fraf/mockup-g%C3%B6r%C3%BCnt%C3%BC-bo%C5%9F-beyaz-masa%C3%BCst%C3%BC-ekran-ve-kahve-fincan%C4%B1-ile-diz%C3%BCst%C3%BC-bilgisayar-kitap-mum.jpg?s=170667a&w=0&k=20&c=9Y2rmz2fJacoHnshBiwCnZwhY5sfvLR3o84K78BhGPE=" alt="kahve">
+        <img class="image" width="420px" height="320px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK9P01UuFDhbLuNlhZRZKmlMmCkeAbbyRwUfpzxSyzJQ&s" alt="orman">
+    </div>
+    <hr>
+    <h2>Tanıtım Videosu</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio et harum vitae consectetur adipisci optio quam magni ullam iusto, illo deserunt sit fuga accusantium soluta unde facilis, culpa consequatur error!</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6-jslGeDoLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+    <label style="font-size: xx-large;
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                  font: bold;
+                  font-style: italic;
+                  color: rgb(0, 0, 0);">0212-912-40-90 - </label>
+    <a href="https://neosyazilim.com"><label class="baglanti" style="font-size: xx-large;
+                                                             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                                                             font-style: italic;"> neosyazilim.com</label></a>
+    <img width="200" height="100" src="data:image/png;base64,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" alt="neoslogo"><br>
+    <p class="deneme">İstanbul, Ankara, İzmir şubeleri ile</p><hr>
+    <ul>
+        <a href="https://neosyazilim.com/iletisim/"><li>İletişim</li></a>
+        <a href="https://neosyazilim.com/iletisim/"><li>Adresimiz</li></a>
+        <a href="https://neosyazilim.com/iletisim/"><li>Fiyat Alın</li></a>
+        <a href="https://neosyazilim.com/iletisim/"><li>Bize Ulaşın</li></a>
+    </ul><hr>
+    <form>
+        <label>İsim Soyisim</label><br>
+        <input style="border-radius: 5px;" type="text" name="name" placeholder="İsim-Soyisim"><br>
+        <label>E-posta</label><br>
+        <input style="border-radius: 5px;" type="email" name="email" placeholder="E-posta"><br>
+        <label>Şifre</label><br>
+        <input style="border-radius: 5px;" type="password" name="password" placeholder="Şifre"><br>
+        <label>Şifre Onay</label><br>
+        <input style="border-radius: 5px;" type="password" name="password2" placeholder="Şifre Onay"><br>
+        <label>Doğum Tarihi</label><br>
+        <input type="date"><br>
+        <label>CV'inizi yükleyiniz</label>
+        <input type="file" name="file"><br>
+        <input style="border-radius: 8px;" type="submit" name="submit">
+    </form>    
+</body>
+</html>

@@ -1,0 +1,21 @@
+$renk:#8c1a35;
+
+h1 {
+    color: white;
+    background-color: red;
+}
+.navbar {
+    background-color: $renk;
+    ul li a {
+        background-color: red;
+    }
+    form input {
+        width: 150px;
+        background-color: green;
+    }
+}
+.box {
+    width: 100px;
+    height: 100px;
+    color: red;
+}

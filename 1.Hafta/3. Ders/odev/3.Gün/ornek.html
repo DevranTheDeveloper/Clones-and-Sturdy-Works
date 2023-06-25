@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .baslik:hover {
+            background-color: yellow;
+            color: purple;
+            font-size: 100px;
+        }
+        a:visited{
+            color: chartreuse;
+        }
+/* first ve last child ile en baştaki veya en spndaki elemanı çağırısınız
+aynı zamanda diğer elemanlar için nth-chilt() etiketi kullanılır */
+        div p:last-child{
+            color: springgreen;
+            font-size: 1rem;
+        }
+
+        div img[src='https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1.jpg']{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="baslik">Bu Bir Başlıktır</h1>
+    <a href="div komutları.html">Bakta Gör</a>
+    <div>
+        <p>Bu Bir Paragraftır</p>
+        <p>Bu ikinci bir paragraftır</p>
+        <p>Bu üçüncü bir paragraftır</p>
+        <p>Bu dörddüncü bir paragraftır</p>
+        <p>Bu beşince bir paragraftır</p>
+    </div>
+    <div>
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1.jpg" alt="manzara">
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1.jpg" alt="manzara">
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1.jpg" alt="manzara">
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1.jpg" alt="manzara">
+    </div>
+</body>
+</html>

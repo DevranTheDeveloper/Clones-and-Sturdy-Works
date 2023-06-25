@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Full Tekrar</title>
+</head>
+<body>
+
+	<h1>Full Tekrar</h1>
+	<h2>Gün-1</h2>
+	<h3>Yazı Şekil ve Boyutları</h3>
+	<ol>
+		<li>
+			<h1>Bu bir Ana Başlık Yazısıdır(h1)</h1>
+		</li>
+		<li>
+			<h2>Bu bir 1. Alt Başlık yazısıdır(h2)</h2>
+		</li>
+		<li>
+			<h3>Bu bir 2. Alt Başlık yazısıdır(h3)</h3>
+		</li>
+		<li>
+			<h4>Bu bir 3. Alt Başlık yazısıdır(h4)</h4>
+		</li>
+		<li>
+			<h5>Bu bir 4. Alt başlık yazısıdır(h5)</h5>
+		</li>
+		<li>
+			<h6>Bu bir 5. Alt Başlık Yazısıdır(h6)</h6>
+		</li>
+		<li>
+			<p>Paragraflar oluşturmak için bunun gibi şekiller kullanılabilir. Burada kullandığım etiket ise "p" etiketidir.</p>
+		</li>
+	</ol>
+	<h3>Yazı Tipleri</h3>
+	<ol type="1">
+		<li>
+			<b>Bu bir bold yazıdır</b>
+		</li>
+		<li>
+			<strong>Bu bir strong yazıdır</strong>
+		</li>
+		<li>
+			<i>Bu bir italik yazıdır</i>
+		</li>
+		<li>
+			<em>Bu bir vurgulanmış yazıdır</em>
+		</li>
+		<li>
+			<mark>Bu bir işaretlenmiş yazıdır</mark>
+		</li>
+		<li>
+			<del>Bu bir üstü çizili yazıdır yazıdır</del>
+		</li>
+		<li>
+			<bdo dir="ltr">Bu bir soldan sağa yazıdır</bdo>
+		</li>
+		<li>
+			<bdo dir="rtl">Bu bir sağdan sola yazıdır</bdo>
+		</li>
+		<li>
+			<address>Bu bir adres yazısıdır</address>
+		</li>
+		<li>
+			<q>Bu bir alıntılanmış yazıdır</q>
+		</li>
+		<li>
+			<sub>Bu bir subscript yazıdır</sub>
+		</li>
+		<li>
+			<sup>Bu bir superscript yazıdır</sup>
+		</li>
+	</ol>
+	<h4>Text formatları aynı zamanda yan yana kulanılabilir</h4>
+	<p>
+		Öncelikle <b>herkese</b> selamlar. Ben <i>Devran Sever</i>.
+	</p>
+	<h3>"hr" ve "br" etiketleri</h3>
+	<p>"hr" etiketi yatay bir çizgi çizer ve özelleştirilenbilir</p>
+	<hr>
+	<p>"br" etiketi ise satır atlamak için kullanılır</p>
+	<br>
+	<p>bunun gibi...</p>
+	<h3>"a" etiketi</h3>
+	<p>"a" etiketi herhangi bir yazı veya görsele tıklandığında başka sitelerle bağlantı kurmak için kullanılır. örneğin <a href="https://www.google.com/">buraya</a> tıklarsanız sizi Google'a yönlendirecektir. Fakat bu sekmede değil de başka bir sekmede açmak istiyorsanız eğer "target" attirbute'nı kullanmanız gerek. Örneğin <a href="https://www.youtube.com/" target="_blank">buraya</a> tıklarsanız farklı bir sekmede youtube sizi karşılayacaktır.</p>
+	<h4>Görsel Örneği</h4>
+	<a href="https://youtu.be/oHg5SJYRHA0"><img src="images.jpeg" alt="resim" width="720" height="560"></a>
+	<h3>Görsel Eklemek</h3>
+	<p>Sitenize eğer görsel eklemek isterseniz "img" komutunu kullanırsınız. Fakat bu komutun attirbute'u olarak kesinlikle bir genişlik ve bir uzunluk belirtmeniz gerekmektedir. Aynı zamanda sunucuyu bilgilendirmek için "alt" attirbute'unu kullanarak görsel bozulursa bir yazı şeklinde bunu kullanıcıya söyleyebilirsiniz.</p>
+	<br>
+	<img src="indir.jpeg" width="720" height="560" alt="görsel">
+	<br>
+	<p>Bununla beraber herhangi bir bağlantı ile de görseli kullanabilirsiniz</p>
+	<br>
+	<img src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="500" height="751" alt="manzara">
+	<h3>Video ve Ses Dosyası Ekleme</h3>
+	<p>Video veya ses dosyası eklemek için "video" ve "audio" etiketlerini kullanırız. Bu etiketlerde video veya audionun çalışması için "contorls" attirbute'unu kullanırız. Aynı zamanda video veya audio etiketlerinin içine dosyayı belirtmek için "source" etiketi kullanılır.</p><br>
+	<video controls width="720" height="560">
+		<source src="selale.mp4" type="video/mp4">
+	</video><br>
+	<p>Aynı zamanda otomatik başlatmak için "autoplay" ve "muted" attirbute'larını kullanmamız gerekmektedir. Yalnızca video için geçerlidir.</p><br>
+	<video controls width="720" height="560" autoplay muted>
+		<source src="selale.mp4" type="video/mp4">
+	</video><br>
+	<p>Ses dosyaları için de durum pek farklı değildir.</p><br>
+	<audio controls>
+		<source src="bülbül.mp3" type="audio/mp3">
+	</audio><br>
+	<p>Kendi bilgisayarımızdan aldığımız gibi bu videoları web üzerinden de alabiliriz. Bunun için ise "iframe" etiketi kullanılır. Fakat bunu video sağlayıcılarından da alabiliriz.</p><br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/U0YW7x9U5TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+	<p>gibi.</p>
+	<h3>Listeler</h3>
+	<p>Listeler ikiye ayrılır: birincisi sırasız listeler ikincisi sıralı listeler. Bu listeler iç içe kullanılabilir ve sıralı listelerde "type" attirbute'u kullanılarak sayı(1), harf(a,A) veya romen rakamı(i,I) şeklinde kullanılabilir. Örneğin:</p><br>
+	<ul>
+		<li>Marmara Bölgesi İlleri
+			<ol type="1">
+				<li>İstanbul</li>
+				<li>Tekirdağ</li>
+				<li>Yalova</li>
+			</ol>
+		</li>
+		<li>İç Anadolu Bölgesi İlleri
+			<ol type="A">
+				<li>Ankara</li>
+				<li>Nevşehir</li>
+				<li>Konya</li>
+			</ol>
+		</li>
+		<li>Güneydoğu Anadolu İlleri
+			<ol type="I">
+				<li>Erzurum</li>
+				<li>Van</li>
+				<li>Hakkari</li>
+			</ol>
+		</li>
+		<li>Karadeniz Bölgesi İlleri
+			<ul>
+				<li>Samsun</li>
+				<li>Sinop</li>
+				<li>Ordu</li>
+			</ul>
+		</li>
+	</ul><br>
+	<p>Bu şekilde kullanabiliriz.</p>
+	<h3>Form Etiketi ve İnput Çeşitleri</h3>
+	<p>Form etiketleri bir bilgi girişi yaparken kullandığımız etikeltlerdir. Bu etiketlere isim de verebiliriz. Bunun için "label" etiketi kullanılır. Ayrıca içi boşken bize bilgi veren yazı için "placeholder" attirbute'u kullanılır. Kısaca "input" çeşitleri:</p><br>
+	<form>
+		<label>Yazı yazmak için kullanılır:</label>
+		<input type="text" name="yazi" placeholder="Buraya Yazınız"><br>
+		<label>E-Mail yazmak için kullanılır:</label>
+		<input type="email" name="e-mail" placeholder="E-Mail Giriniz"><br>
+		<label>Arama motoru için kullanılır:</label>
+		<input type="search" name="arama" placeholder="Ara"><br>
+		<label>Tarih girmek için kullanılır:</label>
+		<input type="date" name="tarih"><br>
+		<label>Şifre girmek için kullanılır sansürlüdür:</label>
+		<input type="password" name="sifre" placeholder="Şifrenizi Giriniz"><br>
+		<label>Dosya seçmek için kullanılır:</label>
+		<input type="file" name="dosya"><br>
+		<label>Sadece sayı değerleri girmek için kullanılır:</label>
+		<input type="number" name="sayi" placeholder="Sayı Giriniz"><br>
+		<label>Değer seçme çubuğu olarak kullanılır:</label>
+		<input type="range" name="cubuk"><br>
+		<label>Renk seçmek için kullanılır:</label>
+		<input type="color" name="renk"><br>
+		<label>İşaretlemek için kullanılır:</label>
+		<input type="checkbox" name="isaret"><br>
+		<label>Birçok seçenek arasından birini seçmek için kullanılır:</label>
+		<select>
+			<option>--Meyve Seçiniz--</option>
+			<option>Elma</option>
+			<option>Kiraz</option>
+			<option>Muz</option>
+			<option>Çilek</option>
+		</select><br>
+	</form>
+	<p>Aynı zamanda giriş sayfası gibi birçok öğeyi içinde barındıran input değerlerini "fieldset" etiketiyle beraber kullanılabilir. Ana başlık için "legend" etiketi kullanılır.</p><br>
+	<fieldset style="color: lightblue;
+					 border-color: black;
+					 border-radius: 15px;">
+
+		<legend>Giriş Yapınız</legend>
+		<label>Adınız-Soyadınız</label><br>
+		<input type="text" name="isim" placeholder="İsim-Soyisim" style="border-radius: 9px;"><br>
+		<label>E-Mail</label><br>
+		<input type="email" name="e-mail" placeholder="E-Mail" style="border-radius: 9px;"><br>
+		<label>Şifre</label><br>
+		<input type="password" name="sifre" placeholder="Şifre" style="border-radius: 9px;"><br>
+		<input type="submit" name="gonder" style="border-radius: 9px;
+												  border-color: darkred;"><br>
+	</fieldset>
+	<p>Böylece tekrar edilecek herşeyi etmiş bulunmaktayız. Yarın görüşmek üzere...</p>
+	<h5>Yazan ve Düzenleyen <q>Devran SEVER</q>.</h5>
+	<h6><a href="https://neosyazilim.com">Neos Yazılım & Akademi</a></h6>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 100px;
+            justify-content: space-between;
+            display: flex;
+            border: 2px solid red;
+        }
+        .icerik {
+            display: flex;
+            justify-content: space-around;
+        }
+        .visible {
+            overflow: visible;
+        }
+        .hidden {
+            overflow: hidden;
+        }
+        .scroll {
+            overflow: scroll;
+        }
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Overflow Özelliği</h2>
+    <div class="icerik">
+        <div class="container visible">
+            <h3>Visible</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae numquam deleniti impedit ad alias expedita ut, excepturi perferendis sapiente. Vel nobis tempore, omnis blanditiis quas dignissimos distinctio eius aliquid.
+            Enim asperiores, eos voluptatem non, eligendi perferendis totam nihil libero odit consequuntur tempora veniam illum tenetur? Necessitatibus, illo, harum architecto debitis iusto perferendis asperiores quo neque officia, iure modi accusantium.</p>
+        </div>
+        <div class="container hidden">
+            <h3>Hidden</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae numquam deleniti impedit ad alias expedita ut, excepturi perferendis sapiente. Vel nobis tempore, omnis blanditiis quas dignissimos distinctio eius aliquid.
+            Enim asperiores, eos voluptatem non, eligendi perferendis totam nihil libero odit consequuntur tempora veniam illum tenetur? Necessitatibus, illo, harum architecto debitis iusto perferendis asperiores quo neque officia, iure modi accusantium.</p>
+        </div>
+        <div class="container scroll">
+            <h3>Scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae numquam deleniti impedit ad alias expedita ut, excepturi perferendis sapiente. Vel nobis tempore, omnis blanditiis quas dignissimos distinctio eius aliquid.
+            Enim asperiores, eos voluptatem non, eligendi perferendis totam nihil libero odit consequuntur tempora veniam illum tenetur? Necessitatibus, illo, harum architecto debitis iusto perferendis asperiores quo neque officia, iure modi accusantium.</p>
+        </div>
+        <div class="container auto">
+            <h3>Auto</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum beatae numquam deleniti impedit ad alias expedita ut, excepturi perferendis sapiente. Vel nobis tempore, omnis blanditiis quas dignissimos distinctio eius aliquid.
+            Enim asperiores, eos voluptatem non, eligendi perferendis totam nihil libero odit consequuntur tempora veniam illum tenetur? Necessitatibus, illo, harum architecto debitis iusto perferendis asperiores quo neque officia, iure modi accusantium.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
