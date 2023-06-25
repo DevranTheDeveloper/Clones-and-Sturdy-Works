@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    background-color: antiquewhite;
+    height: 50px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+}
+.menu i {
+    float: left;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    float: left;
+}
+.menu ul:first-child {
+    margin-left: 0;
+}
+.menu ul li {
+    list-style: none;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menu ul li:hover{
+    color: darkgoldenrod;
+}
+.giris ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+.giris ul li {
+    margin-right: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.giris ul li:hover {
+    color: darkgoldenrod;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    overflow: auto;
+    border: 2px solid;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 3rem;
+}
+.box1 {
+    width: 400px;
+    height: fit-content;
+    border: 2px solid;
+    float: left;
+    margin: 1rem 1rem 0 1rem;
+}
+.box1 img {
+    width: 400px;
+}
+.box3 {
+    border: 2px solid;
+    width: 170px;
+    height: fit-content;
+    float: right;
+    margin: 1rem;
+}
+footer {
+    background-color: antiquewhite;
+    margin-top: 2rem;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+.sag , .sag1 , .sol1 {
+    width: 25%;
+    display: grid;
+    border-right: 5px solid darkgoldenrod;
+    padding: 1rem;
+    color: darkgoldenrod;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.514);
+}
+.sag ul, .sag1 ul, .sol1 ul{
+    list-style: none;
+    float: right;
+}
+.sag h3, .sag1 h3 , .sol1 h3{
+    float: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sag ul li a, .sol1 ul li a{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sag ul li a:visited, .sol1 ul li a:visited {
+    color: rgb(139, 103, 9);
+}
+.sol1 ul li a:hover {
+    color: rgb(110, 81, 8);
+}
+.sag1 ul li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+}
+.sol1 ul li {
+    line-height: 2rem;
+}

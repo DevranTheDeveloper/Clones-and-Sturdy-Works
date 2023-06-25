@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.bg-img {
+    background-image: url(https://rstatic.stores.musicarts.com/locations/3450_gonzales_la.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+}
+fieldset {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    align-items: center;
+    width: fit-content;
+    margin-left: 45%;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    padding: 1rem;
+    position: relative;
+    transform: scale(1.8);
+    border: 2px outset rgb(138, 73, 0);
+    border-radius: 20px 0 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.button {
+    margin-top: 1rem;
+    margin-left: 7rem;
+    background-color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    transition: all 100ms;
+    color: rgb(138, 73, 0);
+    border-radius: 10px;
+}
+.em:invalid {
+    background-color: rgb(202, 90, 90)  ;
+}
+.button:hover {
+    background-color: rgb(97, 55, 0);
+    color: antiquewhite;
+    transform: scale(1.1);
+}
+.button:active {
+    background-color: antiquewhite;
+    color: rgb(138, 73, 0);
+    transform: scale(1);
+}
+.inf {
+    background-color: antiquewhite;
+    border: 2px inset rgb(138, 73, 0);
+    width: 100%;
+    transition: all 300ms;
+    border-radius: 10px;
+}
+.inf:focus {
+    width: 110%;
+    border: 2px inset rgb(138, 73, 0);
+}
+label, legend {
+    text-align: left;
+    font-size: 22px;
+    color: rgb(95, 51, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    background: linear-gradient(130deg, antiquewhite, rgb(138, 73, 0));
+    height: 100vh;
+}
+
+nav {
+    background-color: antiquewhite;
+    height: 3.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+h1 {
+    display: inline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+ul li {
+    list-style: none;
+    transform: scale(1);
+    transition: all 100ms;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(138, 73, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+.page ul {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding-left: 0;
+}
+
+.page ul li {
+    margin-left: 1.5rem;
+}
+
+.page ul:first-child {
+    margin-left: 0;
+}
+.reg ul li:nth-child(1) {
+    border-bottom: 3px solid rgb(138, 73, 0);
+    padding-bottom: 14px;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(216, 175, 121);
+}
+
+.reg ul {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+}
+
+.reg ul li {
+    margin-right: 1.5rem;
+}

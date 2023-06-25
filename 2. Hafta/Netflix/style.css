@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.hero-img {
+    background: linear-gradient(103.24deg, rgba(0, 8, 29, 0.904) 23.83%, rgba(0, 8, 29, 0.301) 96.1%),url(arkaplan.jpg), linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, black 90%);
+    width: 100%;
+    height: 180vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.nf {
+    margin-top: 16px;
+    margin-left: 16px;
+    width: 140%;
+}
+.b {
+    color: white;
+    background-color: red;
+}
+.b a{
+    text-decoration: none;
+    color: white;
+}
+.text {
+    color: white;
+    margin-top: 7rem;
+    margin-left: 100px;
+    width: 80%;
+}
+.text h1 {
+    font-weight: bold;
+    font-size: 100px;
+}
+h3{
+    font-weight: 400;
+    font-size: 40px;
+}
+h4 {
+    font-weight: 350;
+}
+h1,h3,h4 {
+    margin-top: 1rem;
+}
+.e-posta {
+    width: 25%;
+    display: flex;
+    margin-left: 6.5rem;
+}
+.e-posta input {
+    background-color: rgba(0, 0, 0, 0.274);
+    border: 1px solid rgba(245, 245, 245, 0.432);
+    color: rgba(245, 245, 245, 0.884);
+}
+.e-posta input:focus {
+    background-color: rgba(0, 0, 0, 0.274);
+    color: rgba(255, 255, 255, 0.664);
+}
+label {
+    color: rgba(143, 143, 143, 0.849);
+}
+.b1 {
+    font-weight: bolder;
+    font-size: larger;
+    background: red;
+    color: white;
+    width: 140px;
+    height: 55px;
+}
+.b1:hover, .b:hover{
+    background-color: rgb(167, 0, 0);
+    color: white;
+}
+.form-floating>.form-control:focus~label::after {
+    background: transparent;
+}
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+    background: transparent;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0.1rem whitesmoke;
+    border: transparent;
+}
+.background {
+    background: linear-gradient(330deg, rgb(53, 12, 30), rgb(18, 17, 52));
+    border-radius: 5px;
+    height: 70vh;
+}
+.container {
+    margin-top: 13rem;
+}
+.background h2, .background h4 {
+    color: white;
+    margin: 0;
+    font-weight: 350;
+} 
+.background h2 {
+    font-weight: 700;
+}
+.accordion-button{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    height: 4.5rem;
+}
+.accordion-item{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: 1px solid transparent;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.accordion-button:focus {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border-bottom: 1px solid white !important;
+    box-shadow: none;
+}
+.accordion-button {
+    font-size: 20px;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 1px solid transparent !important;
+}
+.sss {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    height: 4rem;
+}
+.background-hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 5%,black , black );
+}
+.accordion-button::after{
+    content: none;
+}
+.accordion-button svg {
+    margin-left: auto;
+    transition: all 500ms;
+}
+svg:focus {
+    transform: rotate(45deg);
+}
+.ft {
+    color: white;
+    font-size: 25px;
+    font-weight: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ft2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 100px;
+    margin-bottom: 4rem;
+}
+.f li a{
+    font-weight: 100;
+    color: rgb(73, 73, 73);
+}
+footer {
+    border-top: 4px solid gray;;
+}
+.container {
+    margin-top: 5rem;
+}
+.accordion-button:not(.collapsed) {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}

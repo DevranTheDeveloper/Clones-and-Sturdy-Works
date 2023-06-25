@@ -1,0 +1,21 @@
+h1 {
+  color: white;
+  background-color: red;
+}
+
+.navbar {
+  background-color: #8c1a35;
+}
+.navbar ul li a {
+  background-color: red;
+}
+.navbar form input {
+  width: 150px;
+  background-color: green;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  color: red;
+}/*# sourceMappingURL=scss.css.map */

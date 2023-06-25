@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 250px;
+        height: 400px;
+        padding: 10px;
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    button {
+        margin-top: 2rem;
+        height: 40px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .b1 {
+        margin-top: 7rem;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1 id="h"></h1>
+        <button>Gün</button>
+        <button id="b2" onclick="getElementById('h').innerHTML = Date()">Tarih</button>
+    </div>
+    
+    <!-- İnline -->
+    <h1 onclick="console.log('Hello World')">Tıkla</h1>
+<!-- İnternal -->
+    <script>
+        console.log("Bugün Js öğrenşrem")
+    </script>
+    <!-- External -->
+    <script src="js.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 3px solid;
+            height: 420px;
+            width: 420px;
+            padding: 10px;
+            box-sizing: content-box;
+            animation: donme 5s infinite;
+            animation: har 5s infinite;
+            background-image: linear-gradient(to left, rgb(169, 240, 54), rgb(91, 91, 255));
+        }
+
+        .box1 {
+            border: 3px solid;
+            background-color: lime;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            animation: donme 5s infinite;
+        }
+
+        .box2 {
+            border: 3px solid;
+            background-color: tomato;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin-left: 9rem;
+            margin-top: 1rem;
+            animation: donme 5s infinite;
+        }
+
+        .box3 {
+            border: 3px solid;
+            background-color: powderblue;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin-left: 17.5rem;
+            margin-top: 1rem;
+            animation: donme 5s infinite;
+
+        }
+
+        .box11 {
+            border: 3px solid;
+            background-color: tomato;
+            width: 30px;
+            height: 30px;
+            margin: 2rem 2rem;
+            animation: donme 5s infinite;
+        }
+
+        .box21 {
+            border: 3px solid;
+            background-color: powderblue;
+            width: 30px;
+            height: 30px;
+            margin-left: 2rem;
+            animation: donme 5s infinite;
+        }
+
+        .box31 {
+            border: 3px solid;
+            background-color: lime;
+            width: 30px;
+            height: 30px;
+            margin-top: 4rem;
+            animation: donme 5s infinite;
+        }
+
+        .arka {
+            background-color: purple;
+            animation: renk 1ms infinite;
+        }
+
+         @keyframes donme {
+            50% {
+                transform: rotate(360deg);
+                border-radius: 100px;
+            }
+        }
+         @keyframes renk {
+            50% {
+                color: blue;
+                background-color: yellow;
+            }
+        }
+        @keyframes har {
+            50% {
+                margin-top:30rem ;
+                margin-left: 30rem;
+                transform: rotateY(180deg);
+                border-radius: 100px;
+            }
+        } 
+    </style>
+</head>
+
+<body class="arka">
+
+    <div class="box">
+        <div class="box1">
+            <div class="box11"></div>
+        </div>
+        <div class="box2">
+            <div class="box21"></div>
+        </div>
+        <div class="box3">
+            <div class="box31"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            border: 3px solid black;
+            font-size: 20px;
+            width: 600px;
+            padding: 0px;
+            
+        }
+
+        .box1 p {
+            margin: 0px;
+        }
+        .box1:hover {
+            background-color: red;
+            color: white;
+        }
+        .box2 {
+            border: 3px double yellow;
+            background-color: purple;
+            font-size: 17px;
+            width: 600px;
+            padding: 0px;
+            color: yellow;
+            font-family: monospace;
+        }
+
+        .box2 p {
+            margin: 0px;
+        }
+
+        
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: monospace;
+            text-align: center;
+        }
+        td, th {
+            border: 1px solid black;
+            
+
+        }
+        td:hover, th:hover {
+            background-color: azure;
+        }
+        .nav li {
+            list-style-type: none;
+            float: left;
+            border: 2px hidden black;
+            margin: 5px;
+            font-size: 20px;
+            background-color: rgb(179, 179, 179);
+            font-weight: bolder;
+            font-family: monospace;
+            border-right: 2px solid rgba(0, 0, 0, 0.3);
+            border-left: 2px solid rgba(0, 0, 0, 0.3);
+            
+        }
+        .nav li:hover {
+            background-color: lightgray;
+        }
+        .nav {
+            padding: 2px;
+        }
+        .box {
+            width: 30px;
+            height: 20px;
+            border: 2px outset;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <p>Bu hover arka plan rengi kırmızı, yazı rengi beyaz ve fontu 20px olan bir paragraftır. Dışı solid olan bir border içermektedir. </p>
+    </div><br>
+    <div class="box2">
+        <p>Bu arka plan rengi mor, rengi sarı ve font tipi monospace olan bir paragraftır. Dışı double olan bir border içermektedir.</p>
+    </div>
+    <div class="tablo">
+        <table>
+            <tr>
+                <th>Sayı</th>
+                <th>Renk</th>
+                <th>Ay</th>
+                <th>Gün</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Kırmızı</td>
+                <td colspan="2">Ocak</td>
+                <td>Pazartesi</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mavi</td>
+                <td>Şubat</td>
+                <td rowspan="2">Salı</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Yeşil</td>
+                <td>Mart</td>
+                <td>Çarşamba</td>
+            </tr>
+            <!-- <tr>
+                <td>4</td>
+                <td>Sarı</td>
+                <td>Nisan</td>
+                <td>Perşembe</td>
+            </tr> -->
+        </table>
+    </div>
+    <div>
+        <ul class="nav">
+            <li><div class="box"></div></li>
+            <li>Ana Sayfa</li>
+            <li>Dersler</li>
+            <li>Okullar</li>
+            <li>Haberler</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

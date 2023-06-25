@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .box {
+        width: 250px;
+        height: 250px;
+        border: 2px solid black;
+        padding: 3rem 5px 20px;
+        background-color: orange;
+        box-sizing: border-box;
+    }
+    .box1 {
+        width: 100px;
+        background-color: aqua;
+        /* margin-top: 10rem; */
+        /* margin-left: 4rem; */
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+        height: 100px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        animation: mymove 5s infinite; 
+    }
+    @keyframes mymove {
+        50% {
+            transform: rotate(0deg);
+        }
+    }
+
+
+
+</style>
+<body>
+    
+    <div class="box">
+        <div class="box1">
+            Kutu İçerik
+        </div>
+    </div>
+
+    <!-- box-sizing: border-box; özelliğini kullanarak, içeriğigenişliği ve yüksekliğini
+    içerik kutusuna uygulanır. Dolgu ve kenarlık değerleir, elementin içeriğine eklenir ve toplam genişlik ve yükseklik etkilnmez
+Yani belirlediğiniz genişlik değeri, içerik kutusu, dolgu ve kenarlk değerleri-->
+
+</body>
+</html>
