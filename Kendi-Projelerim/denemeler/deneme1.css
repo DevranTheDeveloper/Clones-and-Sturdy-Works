@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    margin-top: 2rem;
+    background-color: orange;
+}
+ul {
+    list-style: none;
+    display: flex;
+    scale: 1.1;
+}
+
+ul li {
+    margin-right: 2px;
+    margin-left: 2px;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.r {
+    float: left;
+    
+}
+.l {
+    float: right;
+    margin-left: auto;
+    margin-right: 10px;
+}

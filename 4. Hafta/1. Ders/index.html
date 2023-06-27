@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p {
+            display: flex;
+        }
+        #p {
+            margin-left: 5px;
+        }
+        img {
+            width: 100vh;
+            visibility: hidden;
+            animation: myMove 1s infinite;
+        }
+        @keyframes myMove {
+            50% {
+                transform:scaleX(10);
+                scale: 0.1;
+                margin-left: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button id="buton">Zar At</button>
+    <div class="p">
+        <p>Zardan Çıkan Sayı: </p>   
+        <p id="p"></p> 
+        <div>
+            <img id="img" src="https://i.pinimg.com/736x/9d/bb/43/9dbb43c66cc7bf4cf524590ebe1eb824.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
