@@ -1,95 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Select Tag Örneği</title>
 </head>
-<style>
-    .hero-box, .check , .row{
-        display: flex;
-    }
-    input {
-        margin-left: 30px;
-        margin-right: 10px;
-    }
-    .box {
-        margin: 1rem;
-    }
-    .box1 {
-        background-color: blue;
-        width: 150px;
-        height: 150px;
-    }
-    .box2 {
-        background-color: red;
-        width: 150px;
-        height: 150px;
-    }
-    .box3 {
-        background-color: green;
-        width: 150px;
-        height: 150px;
-    }
-</style>
 <body>
-    <div class="hero-box">
-        <div class="row1">
-            <div class="box box1" id="maviKutu" id="box"></div>
-            <div class="box box1" id="maviKutu" id="box"></div>
-            <div class="box box2" id="yesilKutu" id="box"></div>
-        </div>
-        <div class="row1">
-            <div class="box box3" id="kirmiziKutu" id="box"></div>
-            <div class="box box3" id="kirmiziKutu" id="box"></div>
-            <div class="box box1" id="maviKutu" id="box"></div>
-        </div>
-        <div class="row1">
-            <div class="box box2" id="yesilKutu" id="box"></div>
-            <div class="box box3" id="kirmiziKutu" id="box"></div>
-            <div class="box box1" id="maviKutu" id="box"></div>
-        </div>
-    </div>
-    <div class="check">
-        <div class="row">
-            <input type="checkbox" id="maviCheckbox"><p>maviler</p>
-        </div>
-        <div class="row">
-            <input type="checkbox" id="yesilCheckbox"><p>yeşiller</p>
-        </div>
-        <div class="row">
-            <input type="checkbox" id="kirmiziCheckbox"><p>kırmızılar</p>
-        </div>
-        <div class="row">
-            <button onclick="onayla()">Onayla</button>
-        </div>
-    </div>
+  <select id="mySelect" onchange="showSelectedText()">
+    <option value="">Seçenek Seçin</option>
+    <option value="1">Seçenek 1</option>
+    <option value="2">Seçenek 2</option>
+    <option value="3">Seçenek 3</option>
+    <option value="4">Seçenek 4</option>
+  </select>
 
-    <script>
+  <h1 id="result"></h1>
 
-
-        function onayla() {
-
-            let maviSecili = document.getElementById("maviCheckbox").checked;
-            let yesilSecili = document.getElementById("yesilCheckbox").checked;
-            let kirmiziSecili = document.getElementById("kirmiziCheckbox").checked;
-
-
-            if (maviSecili) {
-                document.getElementById("maviKutu").style.display = "block";
-                document.getElementById("maviKutu").style.scale = "1.1";
-                
-            }
-            if (yesilSecili) {
-                document.getElementById("yesilKutu").style.display = "block";
-            }
-            if (kirmiziSecili) {
-                document.getElementById("kirmiziKutu").style.display = "block";
-            }
-            
-        }
-
-
-    </script>
+  <script>
+    function showSelectedText() {
+      var selectElement = document.getElementById("mySelect");
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var selectedText = selectedOption.text;
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "Seçtiğiniz seçenek: " + selectedText;
+    }
+  </script>
 </body>
 </html>
