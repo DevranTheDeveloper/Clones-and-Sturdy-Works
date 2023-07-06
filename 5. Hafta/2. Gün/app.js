@@ -17,15 +17,7 @@ function listeGötür() {
 
     let count = ul.children.length;
 
-    let li = `
-        <li style="padding: 10px; width: 300px; border: 0.5px solid black; border-radius: 5px; background-color: whitesmoke;">
-            <input id="${count + 1}" class="checkbox" type="checkbox">
-            <label for="${count + 1}" style="font-family: Arial, Helvetica, sans-serif;">Görev ${count + 1}</label>
-        </li>
-        
-    `;
-
-    ul.style.display = "none"
+    ul.lastChild.remove()
 }
 
 //! FİND bir dizi içerisindeki ilk elemanı bulur.
