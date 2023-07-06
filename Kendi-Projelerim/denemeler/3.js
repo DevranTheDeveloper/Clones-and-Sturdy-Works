@@ -22,3 +22,11 @@ cikar.addEventListener("click", function(){
     `
     document.getElementById("tasks").lastChild.remove();
 });
+
+let blue = document.getElementById("b");
+let red = document.getElementById("r");
+let green = document.getElementById("g");
+
+blue.addEventListener("click", function(){
+    let box = document.getElementById("box").classList;
+})

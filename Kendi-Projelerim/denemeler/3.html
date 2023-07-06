@@ -40,6 +40,23 @@
             width: 600px;
             font-family: Arial, Helvetica, sans-serif;
         }
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .b {
+            background-color: blue;
+        }
+        .r {
+            background-color: red;
+        }
+        .g {
+            background-color: green;
+        }
+        .row-1 {
+            display: flex;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +71,28 @@
             <button id="cikar">ÇIKAR</button>
         </div>
     </div>
-
+    <div class="boxs">
+        <div class="row-1">
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+            <div class="box g" id="box"></div>
+        </div>
+        <div class="row-1">
+            <div class="box g" id="box"></div>
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+        </div>
+        <div class="row-1">
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+            <div class="box b" id="box"></div>
+        </div>
+    </div>
+    <div class="butons">
+        <button id="b">Blue</button>
+        <button id="g">Green</button>
+        <button id="r">Red</button>
+    </div>
     <script src="3.js"></script>
 </body>
 </html>
