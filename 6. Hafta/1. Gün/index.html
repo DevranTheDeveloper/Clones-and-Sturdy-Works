@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .buttons input {
+        padding: 6px;
+        width: 700px;
+        border-radius: 20px 0 0 20px;
+        border-right: transparent;
+    }
+    .buttons button {
+        padding: 6px;
+        width: 120px;
+        border-radius: 0 20px 20px 0;
+        background-color: rgb(105, 150, 231);
+        color: white;
+        font-size: 20px;
+        transition: all 300ms;
+    }
+    .buttons button:hover {
+        background-color: rgb(100, 100, 252);
+    }
+    .blank {
+        height: 10vh;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .gorevs ul li {
+        list-style: none;
+        padding: 10px;
+        border: 1px solid black;
+        width: 500px;
+    }
+</style>
+<body>
+    <div class="buttons">
+        <input type="text" id="giris">
+        <button>Ekle</button>
+    </div>
+    <div class="blank"></div>
+    <div class="gorevs">
+        <ul id="ul">
+            <li>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">aaa</label>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
