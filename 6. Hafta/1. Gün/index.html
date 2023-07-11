@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,14 @@
         display: flex;
         justify-content: center;
     }
+
     .buttons input {
         padding: 6px;
         width: 700px;
         border-radius: 20px 0 0 20px;
         border-right: transparent;
     }
+
     .buttons button {
         padding: 6px;
         width: 120px;
@@ -25,14 +28,17 @@
         font-size: 20px;
         transition: all 300ms;
     }
+
     .buttons button:hover {
         background-color: rgb(100, 100, 252);
     }
+
     .blank {
         height: 10vh;
         width: 100%;
         border-bottom: 1px solid black;
     }
+
     .gorevs ul li {
         list-style: none;
         padding: 10px;
@@ -40,10 +46,11 @@
         width: 500px;
     }
 </style>
+
 <body>
     <div class="buttons">
-        <input type="text" id="giris">
-        <button>Ekle</button>
+        <input type="text" id="giris" value="">
+        <button type="button" id="ekle">Ekle</button>
     </div>
     <div class="blank"></div>
     <div class="gorevs">
@@ -55,6 +62,24 @@
         </ul>
     </div>
 
+    <script>
+        const ul = document.getElementById("ul");
+        const ekle = document.getElementById("ekle");
+
+        ekle.addEventListener("click", function () {
+            const gorev = document.getElementById("giris").value;
+            const count = ul.children.length;
+            const li = `
+                <li>
+                    <input type="checkbox" id="${count + 1}">
+                    <label for="${count + 1}">${gorev}</label>
+                </li>
+            `;
+            ul.insertAdjacentHTML("beforeend", li);
+            document.getElementById("giris").value = ""; // Giriş alanını temizleme
+        });
+    </script>
     <script src="app.js"></script>
 </body>
+
 </html>
