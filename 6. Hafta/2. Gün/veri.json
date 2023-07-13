@@ -1,0 +1,38 @@
+[    
+    {
+        "name": "emre", 
+        "surName": "sarigul", 
+        "age": 28,
+        "isMaried": true, 
+        "hobies": ["yürüyüş","yüzmek","bisiklet"],
+        "country": {
+            "ülke": "Türkiye",
+            "şehir": "İstanbul",
+            "postCode": "1001"
+        }
+    },
+    {
+        "name": "Batuhan", 
+        "surName": "Yaşayan", 
+        "age": 28,
+        "isMaried": false,
+        "hobies": ["yürüyüş","yüzmek","bisiklet"],
+        "country": {
+            "ülke": "Türkiye",
+            "şehir": "Bolu",
+            "postCode": "2001"
+        } 
+    },
+    {
+        "name": "Su", 
+        "surName": "Kavak", 
+        "age": 24,
+        "isMaried": false,
+        "hobies": ["yürüyüş","yüzmek","bisiklet"],
+        "country": {
+            "ülke": "Türkiye",
+            "şehir": "Balıkesir",
+            "postCode": "3001"
+        }  
+    }
+]
