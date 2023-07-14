@@ -4,12 +4,18 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: "poppins", sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+*::selection {
+    background-color: #595959;
 }
 
 body{
     width: 100%;
     min-height: 100vh;
+    background-color: #595959;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -165,7 +171,6 @@ footer p, h6{
     text-shadow: 0 0 10px;
 }
 .main-blr {
-    backdrop-filter: blur(5px);
     background-color: #00000044;
     width: 100%;
     height: 100%;
@@ -173,4 +178,303 @@ footer p, h6{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.blank {
+    background-color: #808F85;
+    width: 100%;
+    height: 15vh;
+    box-shadow: rgba(50, 50, 93, 0.418) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.411) 0px 18px 36px -18px inset;   
+}
+.guitars {
+    height: 60vh;
+    width: 100.65%;
+}
+.Piano {
+    height: 60vh;
+    width: 100.65%;
+}
+.Drums {
+    height: 60vh;
+    width: 100.65%;
+}
+.Violins {
+    height: 60vh;
+    width: 100.65%;
+}
+.left {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.808)), url(/Music_Store/İmg/gitar2.jpg);
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left2 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.808)), url(/Music_Store/İmg/piano.jpg);
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.808)), url(/Music_Store/İmg/drum.jpg);
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left4 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.808)), url(/Music_Store/İmg/violin.jpg);
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list {
+    color: #F2E9DC;
+    margin-left: auto;
+    float: right;
+}
+.list h3 {
+    font-weight: 600;
+    border-right: 5px solid #F2E9DC;
+    padding-right: 5px;
+    padding: 8px;
+    margin-bottom: 40px;
+    width: fit-content;
+    margin-left: auto;
+}
+.list ul li{
+    list-style: inside disc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.list2 {
+    color: #F2E9DC;
+}
+.list2 h3 {
+    font-weight: 600;
+    border-left: 5px solid #F2E9DC;
+    padding-left: 5px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+.list2 ul li{
+    list-style: inside disc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.list3 {
+    color: #F2E9DC;
+    margin-left: auto;
+    float: right;
+}
+.list3 h3 {
+    font-weight: 600;
+    border-right: 5px solid #F2E9DC;
+    padding-right: 5px;
+    padding: 8px;
+    margin-bottom: 40px;
+    width: fit-content;
+    margin-left: auto;
+}
+.list3 ul li{
+    list-style: inside disc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.list4 {
+    color: #F2E9DC;
+}
+.list4 h3 {
+    font-weight: 600;
+    border-left: 5px solid #F2E9DC;
+    padding-left: 5px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+.list4 ul li{
+    list-style: inside disc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.left button {
+    width: 150px;
+    height: 50px;
+    margin-top: auto;
+    margin-left: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: transparent;
+    border: transparent;
+    color: #F2E9DC;
+    background-color: #808f8560;
+    transition: all 300ms;
+}
+.left2 button {
+    width: 150px;
+    height: 50px;
+    margin-top: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: transparent;
+    border: transparent;
+    color: #F2E9DC;
+    background-color: #808f8560;
+    transition: all 300ms;
+}
+.left3 button {
+    width: 150px;
+    height: 50px;
+    margin-top: auto;
+    margin-left: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: transparent;
+    border: transparent;
+    color: #F2E9DC;
+    background-color: #808f8560;
+    transition: all 300ms;
+}
+.left4 button {
+    width: 150px;
+    height: 50px;
+    margin-top: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: transparent;
+    border: transparent;
+    color: #F2E9DC;
+    background-color: #808f8560;
+    transition: all 300ms;
+}
+.left button:hover, .left2 button:hover, .left3 button:hover, .left4 button:hover {
+    background-color: #59595988;
+    scale: 1.05;
+}
+.login {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F2E9DC;
+    box-shadow: rgba(50, 50, 93, 0.418) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.411) 0px 18px 36px -18px inset;   
+}
+.login h1 {
+    font-weight: 600;
+}
+.login-box {
+    width: 300px;
+    /* border: 1px solid; */
+    height: fit-content;
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.options {
+    margin-bottom: 10px;
+}
+.google {
+    padding: 8px;
+    background-color: #808f85a6;
+    color: #F2E9DC;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 200ms;
+}
+.google:hover {
+    background-color:#5f6d65;
+}
+.input {
+    margin-bottom: 10px;
+}
+.email {
+    background-color: #808f85a6;
+    font-weight: 600;
+    color: #F2E9DC;
+    padding: 8px;
+    border: transparent;
+    border-radius: 5px 5px 0 0;
+    transition: all 200ms;
+    width: 100%;
+}
+.email::placeholder {
+    color: #F2E9DC;
+}
+.email:focus {
+    background-color:#5f6d65;
+}
+.password {
+    background-color: #808f85a6;
+    font-weight: 600;
+    color: #F2E9DC;
+    padding: 8px;
+    border: transparent;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    transition: all 200ms;
+    margin-top: 1px;
+}
+.password::placeholder {
+    color: #F2E9DC;
+}
+.password:focus {
+    background-color:#5f6d65;
+}
+.remember {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.remember input {
+    margin-right: 5px;
+}
+.buttons button {
+    padding: 8px;
+    background-color: #808f85a6;
+    color: #F2E9DC;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 200ms;
+}
+.buttons button:hover {
+    background-color:#5f6d65;
+}
+.yazi {
+    text-align: center;
+    margin-top: 10px;
+}
+.buttons p {
+    font-size: 13px;
+    text-align: center;
+}
+.buttons p a {
+    color: #87998f;
+    text-decoration: none;
+}
+small {
+    color: #7c7c7c;
 }
