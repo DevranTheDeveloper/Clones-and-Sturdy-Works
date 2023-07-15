@@ -10,6 +10,7 @@ logins.addEventListener("click", function(event){
 
     if (sorgu && sorgu[0].email === logine.value && sorgu[0].password === loginp.value) {
         console.log("Giriş yapıldı");
+        document.querySelector("#err").textContent = " "
     } else {
         document.querySelector("#err").textContent = "Password or Email is incorrect"
         document.querySelector("#err").style.color = "red"
