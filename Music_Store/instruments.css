@@ -4,10 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5vh;
+    border-bottom: 5px solid #f2e9dc5d;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .filters {
     position: sticky;
-    top: 67px;
+    top: 70px;
     height: 80vh;
     box-shadow: 0 0 20px black;
     color: #F2E9DC;
