@@ -186,18 +186,24 @@
             items.style.display = "none";
 
             const topElements = document.querySelectorAll(".top");
-            topElements.forEach((topElement) => {
-                topElement.addEventListener("click", function () {
-                    const randomX = Math.floor(Math.random() * 1800);
-                    const randomY = Math.floor(Math.random() * 850);
-                    topElement.style.left = `${randomX}px`;
-                    topElement.style.top = `${randomY}px`;
+  topElements.forEach((topElement) => {
+    topElement.addEventListener("click", function () {
+      const mainWidth = main.offsetWidth;
+      const mainHeight = main.offsetHeight;
+      const topElementWidth = topElement.offsetWidth;
+      const topElementHeight = topElement.offsetHeight;
 
-                    count++;
-                    updateScoreDisplay();
+      const randomX = Math.floor(Math.random() * (mainWidth - topElementWidth));
+      const randomY = Math.floor(Math.random() * (mainHeight - topElementHeight));
 
-                    if (count === 1) {
-                        startCountdown();
+      topElement.style.left = `${randomX}px`;
+      topElement.style.top = `${randomY}px`;
+
+      count++;
+      updateScoreDisplay();
+
+      if (count === 1) {
+        startCountdown();
                     }
                 });
             });
