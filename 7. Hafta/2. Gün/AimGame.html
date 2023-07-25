@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+        }
+
+        .main {
+            border: 10px solid limegreen;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .items {
+            color: limegreen;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .items h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .items button {
+            padding: 8px;
+            background-color: transparent;
+            border: 2px solid limegreen;
+            color: limegreen;
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .items button:hover {
+            background-color: green;
+        }
+
+        .items button:active {
+            background-color: rgb(0, 77, 0);
+        }
+
+        .top {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .dokan {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            color: limegreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 600;
+            margin-left: 0;
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: auto;
+        }
+
+        .son {
+            color: limegreen;
+            font-size: 60px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            align-items: center;
+        }
+
+        .son button {
+            padding: 8px;
+            background-color: transparent;
+            border: 2px solid limegreen;
+            color: limegreen;
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .son h1:first-child {
+            color: red;
+        }
+
+        .son button:hover {
+            background-color: green;
+        }
+
+        .son button:active {
+            background-color: rgb(0, 77, 0);
+        }
+
+        .noc {
+            margin-top: 20px;
+            padding: 8px;
+            width: 200px;
+            background-color: transparent;
+            border: 3px solid limegreen;
+            color: limegreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .noc:focus {
+            background-color: black;
+            border-radius: 0;
+            border: 3px solid limegreen;
+            box-shadow: none;
+        }
+
+        .noc:active {
+            box-shadow: none;
+            border: transparent;
+        }
+
+        .noc option:hover {
+            background-color: green;
+            color: limegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="dokan">
+            <h1 class="score">Score: 0</h1>
+            <h1 class="time">Time Remain: 60</h1>
+        </div>
+        <div class="items">
+            <h1>Aim Game</h1>
+            <button class="start">START</button>
+            <select class="noc">
+                <option value="">Number of Circles</option>
+                <option value="1">1 Circle</option>
+                <option value="2">2 Circles</option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <script>
+        let count = 0;
+        let sure = 60;
+        const main = document.querySelector(".main");
+        const items = document.querySelector(".items");
+        const button = document.querySelector(".start");
+        const noc = document.querySelector(".noc");
+        const topHTML = '<div class="top"></div>';
+
+        function startGame() {
+            count = 0;
+            sure = 60;
+            if (noc.value === "1") {
+                main.insertAdjacentHTML("beforeend", topHTML);
+            } else if (noc.value === "2") {
+                main.insertAdjacentHTML("beforeend", topHTML);
+                main.insertAdjacentHTML("beforeend", topHTML);
+            } else {
+                alert("Pick Number of Circles");
+                return;
+            }
+            items.style.display = "none";
+
+            const topElements = document.querySelectorAll(".top");
+            topElements.forEach((topElement) => {
+                topElement.addEventListener("click", function () {
+                    const randomX = Math.floor(Math.random() * 1800);
+                    const randomY = Math.floor(Math.random() * 850);
+                    topElement.style.left = `${randomX}px`;
+                    topElement.style.top = `${randomY}px`;
+
+                    count++;
+                    updateScoreDisplay();
+
+                    if (count === 1) {
+                        startCountdown();
+                    }
+                });
+            });
+        }
+
+        function updateScoreDisplay() {
+            const scoreDisplay = document.querySelector(".score");
+            scoreDisplay.textContent = `Score: ${count}`;
+        }
+
+        function startCountdown() {
+            const time = document.querySelector(".time");
+            const intervalId = setInterval(() => {
+                sure--;
+                time.innerHTML = `Time Remaining: ${sure}`;
+
+                if (sure === 0) {
+                    clearInterval(intervalId);
+                    displayGameOver();
+                }
+            }, 1000);
+        }
+
+        function displayGameOver() {
+            const son = `
+        <div class="son">
+          <h1>Game Over</h1>
+          <h1 class="score">Score: ${count}</h1>
+          <a href=""><button type="reset" class="start">Play Again</button></a>
+        </div>
+      `;
+            main.innerHTML = "";
+            main.insertAdjacentHTML("beforeend", son);
+
+            const playAgainButton = document.querySelector(".play-again");
+            playAgainButton.addEventListener("click", function () {
+                main.innerHTML = "";
+                startGame();
+            });
+        }
+
+        button.addEventListener("click", startGame);
+    </script>
+</body>
+
+</html>
