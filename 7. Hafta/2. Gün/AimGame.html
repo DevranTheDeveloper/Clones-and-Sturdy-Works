@@ -157,6 +157,9 @@
                 <option value="1">1 Circle</option>
                 <option value="2">2 Circles</option>
             </select>
+            <audio class="sound">
+                <source src="523763__matrixxx__select-granted-06.wav">
+            </audio>
         </div>
 
     </div>
@@ -170,6 +173,12 @@
         const button = document.querySelector(".start");
         const noc = document.querySelector(".noc");
         const topHTML = '<div class="top"></div>';
+
+        function playSound(){
+            const sound = document.querySelector(".sound");
+            sound.currentTime = 0;
+            sound.play()
+        }
 
         function startGame() {
             count = 0;
@@ -186,25 +195,26 @@
             items.style.display = "none";
 
             const topElements = document.querySelectorAll(".top");
-  topElements.forEach((topElement) => {
-    topElement.addEventListener("click", function () {
-      const mainWidth = main.offsetWidth;
-      const mainHeight = main.offsetHeight;
-      const topElementWidth = topElement.offsetWidth;
-      const topElementHeight = topElement.offsetHeight;
+            topElements.forEach((topElement) => {
+                topElement.addEventListener("click", function () {
+                    const mainWidth = main.offsetWidth;
+                    const mainHeight = main.offsetHeight;
+                    const topElementWidth = topElement.offsetWidth;
+                    const topElementHeight = topElement.offsetHeight;
 
-      const randomX = Math.floor(Math.random() * (mainWidth - topElementWidth));
-      const randomY = Math.floor(Math.random() * (mainHeight - topElementHeight));
+                    const randomX = Math.floor(Math.random() * (mainWidth - topElementWidth));
+                    const randomY = Math.floor(Math.random() * (mainHeight - topElementHeight));
 
-      topElement.style.left = `${randomX}px`;
-      topElement.style.top = `${randomY}px`;
+                    topElement.style.left = `${randomX}px`;
+                    topElement.style.top = `${randomY}px`;
 
-      count++;
-      updateScoreDisplay();
+                    count++;
+                    updateScoreDisplay();
 
-      if (count === 1) {
-        startCountdown();
+                    if (count === 1) {
+                        startCountdown();
                     }
+                    playSound()
                 });
             });
         }
