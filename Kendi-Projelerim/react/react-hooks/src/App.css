@@ -2,6 +2,9 @@
   font-size: 75px;
 }
 button {
-  width: 150px;
-  height: 150px;
+  width: fit-content;
+  height: fit-content;
+}
+pre {
+  font-size: 20px;
 }
