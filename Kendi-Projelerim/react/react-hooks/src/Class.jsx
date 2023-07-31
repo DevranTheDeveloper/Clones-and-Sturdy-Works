@@ -20,6 +20,7 @@ class MyClass extends Component {
       <>
         <input className='deneme' onKeyDown={this.keyHandler}></input>
         <h1>{this.state.yazi}</h1>
+        
       </>
     );
   }
