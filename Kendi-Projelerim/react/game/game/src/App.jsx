@@ -62,7 +62,7 @@ function App() {
     };
 
     if (direction) {
-      const interval = setInterval(movePlayer, 200);
+      const interval = setInterval(movePlayer, 100);
       return () => clearInterval(interval);
     }
   }, [direction, lastDirection]);
