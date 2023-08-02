@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Scene, camera ve renderer oluşturma
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Küp oluşturma
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        // Kamera pozisyonunu ayarlama
+        camera.position.z = 5;
+
+        // Render fonksiyonunu oluşturma
+        function animate() {
+        requestAnimationFrame(animate);
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
+        }
+        animate();
+        // Scene, camera ve renderer oluşturma
+        // var scene = new THREE.Scene();
+        // var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // var renderer = new THREE.WebGLRenderer();
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.body.appendChild(renderer.domElement);
+
+        // // Piramit oluşturma
+        // var geometry = new THREE.ConeGeometry(1, 2, 4);
+        // var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        // var pyramid = new THREE.Mesh(geometry, material);
+        // scene.add(pyramid);
+
+        // // Kamera pozisyonunu ayarlama
+        // camera.position.z = 5;
+
+        // // Render fonksiyonunu oluşturma
+        // function animate() {
+        // requestAnimationFrame(animate);
+        // pyramid.rotation.x += 0.01;
+        // pyramid.rotation.y += 0.01;
+        // renderer.render(scene, camera);
+        // }
+        // animate();
+            // Scene, camera ve renderer oluşturma
+        // var scene = new THREE.Scene();
+        // var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // var renderer = new THREE.WebGLRenderer();
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.body.appendChild(renderer.domElement);
+
+        // // Araba gövdesi oluşturma
+        // var bodyGeometry = new THREE.BoxGeometry(2, 1, 1);
+        // var bodyMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        // var body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+        // scene.add(body);
+
+        // // Araba tekerlekleri oluşturma
+        // var wheelGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.5, 32);
+        // var wheelMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+        // var wheel1 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+        // var wheel2 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+        // var wheel3 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+        // var wheel4 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+        // wheel1.position.set(-0.8, -0.5, 0.6);
+        // wheel2.position.set(0.8, -0.5, 0.6);
+        // wheel3.position.set(-0.8, -0.5, -0.6);
+        // wheel4.position.set(0.8, -0.5, -0.6);
+        // scene.add(wheel1);
+        // scene.add(wheel2);
+        // scene.add(wheel3);
+        // scene.add(wheel4);
+
+        // // Kamera pozisyonunu ayarlama
+        // camera.position.z = 5;
+
+        // // Render fonksiyonunu oluşturma
+        // function animate() {
+        // requestAnimationFrame(animate);
+        // body.rotation.y += 0.01;
+        // renderer.render(scene, camera);
+        // }
+        // animate();
+            // Scene, camera ve renderer oluşturma
+        // var scene = new THREE.Scene();
+        // var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // var renderer = new THREE.WebGLRenderer();
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.body.appendChild(renderer.domElement);
+
+        // // Köpek gövdesi oluşturma
+        // var bodyGeometry = new THREE.SphereGeometry(1, 32, 32);
+        // var bodyMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513 });
+        // var body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+        // scene.add(body);
+
+        // // Köpek kafası oluşturma
+        // var headGeometry = new THREE.SphereGeometry(0.6, 32, 32);
+        // var headMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513 });
+        // var head = new THREE.Mesh(headGeometry, headMaterial);
+        // head.position.set(0, 1.2, 0);
+        // scene.add(head);
+
+        // // Köpek kulakları oluşturma
+        // var earGeometry = new THREE.ConeGeometry(0.3, 0.8, 32);
+        // var earMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513 });
+        // var leftEar = new THREE.Mesh(earGeometry, earMaterial);
+        // leftEar.position.set(-0.4, 1.8, 0.4);
+        // leftEar.rotation.z = -Math.PI / 4;
+        // scene.add(leftEar);
+
+        // var rightEar = new THREE.Mesh(earGeometry, earMaterial);
+        // rightEar.position.set(0.4, 1.8, 0.4);
+        // rightEar.rotation.z = Math.PI / 4;
+        // scene.add(rightEar);
+
+        // // Köpek kuyruğu oluşturma
+        // var tailGeometry = new THREE.CylinderGeometry(0.1, 0.1, 0.8, 32);
+        // var tailMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513 });
+        // var tail = new THREE.Mesh(tailGeometry, tailMaterial);
+        // tail.position.set(0, -0.7, -0.6);
+        // scene.add(tail);
+
+        // // Kamera pozisyonunu ayarlama
+        // camera.position.z = 5;
+
+        // // Render fonksiyonunu oluşturma
+        // function animate() {
+        // requestAnimationFrame(animate);
+        // body.rotation.y += 0.01;
+        // head.rotation.y += 0.01;
+        // tail.rotation.x += 0.02;
+        // renderer.render(scene, camera);
+        // }
+        // animate();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.top {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+    color: white;
+}
+.main-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid;
+}
+.left {
+    width: 25%;
+    height: 90vh;
+    border-right: 1px solid;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(168, 168, 168);
+}
+.input {
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+.input input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: transparent;
+    background-color: gray;
+    color: white;
+}
+input::placeholder {
+    color: white;
+}
+.right {
+    width: 75%;
+    height: 90vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    height: 89vh;
+    display: flex;
+    overflow: auto;
+}
+.inp {
+    border-top: 1px solid;
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+    background-color: rgb(204, 204, 204);
+}
+.inp input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: transparent;
+    background-color: gray;
+    border-right: 1px solid;
+}
+.inp button {
+    border-radius: 0 20px 20px 0;
+    border: transparent;
+    background-color: rgb(87, 112, 136);
+    color:  white;
+    padding: 10px;
+}
+.ml {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+}
+.message-box {
+    width: fit-content;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    height: fit-content;
+    background-color: gray;
+    margin-bottom: 10px;
+    display: block;
+    float: right;
+    margin-left: auto;
+}
+.message-box2 {
+    width: fit-content;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    height: fit-content;
+    background-color: gray;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    margin-right: auto;
+}
+
+  
+  /* Rest of your CSS styles here... */
+  

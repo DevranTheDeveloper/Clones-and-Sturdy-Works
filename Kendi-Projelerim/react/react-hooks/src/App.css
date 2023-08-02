@@ -1,0 +1,10 @@
+*{
+  font-size: 75px;
+}
+button {
+  width: fit-content;
+  height: fit-content;
+}
+pre {
+  font-size: 20px;
+}

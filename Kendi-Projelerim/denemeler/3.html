@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .btns {
+            float: right;
+            margin-left: auto;
+            margin-right: 10rem;
+            margin-top: 2rem;
+        }
+        button {
+            margin-right: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            width: 100px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 1px solid gray;
+        }
+        #ekle {
+            background-color: rgb(59, 230, 59);
+        }
+        #cikar {
+            background-color: rgb(197, 32, 32);
+        }
+        ul {
+            list-style: none;
+        }
+        .li {
+            background-color: whitesmoke;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 10px;
+            width: 600px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .b {
+            background-color: blue;
+        }
+        .r {
+            background-color: red;
+        }
+        .g {
+            background-color: green;
+        }
+        .row-1 {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="task-list">
+            <ul id="tasks">
+                
+            </ul>
+        </div>
+        <div class="btns">
+            <button id="ekle">EKLE</button>
+            <button id="cikar">ÇIKAR</button>
+        </div>
+    </div>
+    <div class="boxs">
+        <div class="row-1">
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+            <div class="box g" id="box"></div>
+        </div>
+        <div class="row-1">
+            <div class="box g" id="box"></div>
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+        </div>
+        <div class="row-1">
+            <div class="box b" id="box"></div>
+            <div class="box r" id="box"></div>
+            <div class="box b" id="box"></div>
+        </div>
+    </div>
+    <div class="butons">
+        <button id="b">Blue</button>
+        <button id="g">Green</button>
+        <button id="r">Red</button>
+    </div>
+    <script src="3.js"></script>
+</body>
+</html>

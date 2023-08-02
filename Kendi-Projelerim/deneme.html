@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Select Tag Örneği</title>
 </head>
 <body>
+  <select id="mySelect" onchange="showSelectedText()">
+    <option value="">Seçenek Seçin</option>
+    <option value="1">Seçenek 1</option>
+    <option value="2">Seçenek 2</option>
+    <option value="3">Seçenek 3</option>
+    <option value="4">Seçenek 4</option>
+  </select>
 
-    <script src="deneme.js"></script>
+  <h1 id="result"></h1>
+
+  <script>
+    function showSelectedText() {
+      var selectElement = document.getElementById("mySelect");
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var selectedText = selectedOption.text;
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "Seçtiğiniz seçenek: " + selectedText;
+    }
+  </script>
 </body>
 </html>

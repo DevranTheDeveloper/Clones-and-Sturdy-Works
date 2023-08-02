@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kutu Renkleri</title>
+</head>
+<body>
+    <h2>Kutu Renkleri</h2>
+    
+    <div>
+        <input type="checkbox" id="maviCheckbox" />
+        <label for="maviCheckbox">Mavi</label>
+    </div>
+    <div>
+        <input type="checkbox" id="kirmiziCheckbox" />
+        <label for="kirmiziCheckbox">Kırmızı</label>
+    </div>
+    <div>
+        <input type="checkbox" id="yesilCheckbox" />
+        <label for="yesilCheckbox">Yeşil</label>
+    </div>
+    
+    <button onclick="onayla()">Onayla</button>
+    
+    <div id="sonuc"></div>
+
+    <script>
+        function onayla() {
+            // Checkbox durumlarını kontrol et
+            var maviSecili = document.getElementById("maviCheckbox").checked;
+            var kirmiziSecili = document.getElementById("kirmiziCheckbox").checked;
+            var yesilSecili = document.getElementById("yesilCheckbox").checked;
+
+            var sonuc = document.getElementById("sonuc");
+            sonuc.innerHTML = "";
+
+            if (maviSecili) {
+                // Mavi kutuyu oluştur ve ekrana ekle
+                var maviKutu = document.createElement("div");
+                maviKutu.style.width = "50px";
+                maviKutu.style.height = "50px";
+                maviKutu.style.backgroundColor = "blue";
+                sonuc.appendChild(maviKutu);
+            }
+
+            if (kirmiziSecili) {
+                // Kırmızı kutuyu oluştur ve ekrana ekle
+                var kirmiziKutu = document.createElement("div");
+                kirmiziKutu.style.width = "50px";
+                kirmiziKutu.style.height = "50px";
+                kirmiziKutu.style.backgroundColor = "red";
+                sonuc.appendChild(kirmiziKutu);
+            }
+
+            if (yesilSecili) {
+                // Yeşil kutuyu oluştur ve ekrana ekle
+                var yesilKutu = document.createElement("div");
+                yesilKutu.style.width = "50px";
+                yesilKutu.style.height = "50px";
+                yesilKutu.style.backgroundColor = "green";
+                sonuc.appendChild(yesilKutu);
+            }
+        }
+    </script>
+</body>
+</html>
