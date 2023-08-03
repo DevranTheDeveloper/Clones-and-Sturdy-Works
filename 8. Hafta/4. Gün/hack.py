@@ -24,6 +24,9 @@ def mesaf():
     pyautogui.click()
     time.sleep(1)
     pyautogui.moveTo(x=1011, y=310)
+    time.sleep(1)
+    pyautogui.click()
+    
     
 while True:
     mesaf()    
