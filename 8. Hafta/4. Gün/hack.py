@@ -25,7 +25,6 @@ def mesaf():
     time.sleep(1)
     pyautogui.moveTo(x=1011, y=310)
     
-    
 while True:
     mesaf()    
     time.sleep(100)
