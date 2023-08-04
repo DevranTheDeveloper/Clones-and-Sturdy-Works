@@ -1,33 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import { Link } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState('')
+  const [surname, setSurname] = useState('')
+  const [userList, setUserList] = useState([])
+
+  const submit = () => {
+    const newUser = {
+      name: name,
+      surname: surname
+    }
+    setUserList([...userList, newUser])
+    setName('')
+    setSurname('')
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Navbar />
+      <header className='hdr'>
+        <div className="bck">
+          <h1 className='baslik'>TITAN</h1>
+        </div>
+      </header>
+      <div className="yazi">
+        <Link to="page2"><h1>2. Sayfa</h1></Link>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='name' />
+        <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} placeholder='surname' />
+        <button onClick={submit}>Submit</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        {userList.map((user, index) => (
+          <div key={index}>
+            <div className="user">
+              <h1>{user.name}</h1>
+              <h1>{user.surname}</h1>
+            </div>
+          </div>
+        ))}
     </>
   )
 }
