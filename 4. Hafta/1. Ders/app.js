@@ -146,3 +146,6 @@ let renkRandom = () =>{
 }
 
 setInterval(renkRandom,1)
+
+
+if(x=2){alert("hello")} 
