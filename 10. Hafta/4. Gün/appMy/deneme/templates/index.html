@@ -33,6 +33,15 @@
             <h1>DÜNYANIN EN İYİ WEB SİTESİ</h1>
         </div>
     </header>
-    
+    {% for i in Asd %}
+    <div class="box">
+        <h3>
+            {{i.title}}
+        </h3>
+        <p>
+            {{i.text}} 
+        </p>
+    </div>
+    {% endfor %}
 </body>
 </html>
