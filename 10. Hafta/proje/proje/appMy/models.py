@@ -16,3 +16,6 @@ class Post(models.Model):
     def __str__(self) -> str:
         return self.title
     
+class Comment(models.Model):
+    postComment = models.ForeignKey(Post, verbose_name=(""), on_delete=models.CASCADE, null=True, blank=True)
+    comment = models.TextField(("Yorum"))
