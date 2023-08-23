@@ -23,5 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="anasayfa"),   
     path('kategori/<id>/',category, name='kategori'),
-    path('detay/<id>/', detail, name="detaylar")
+    path('detay/<id>/', detail, name="detaylar"),
+    path('kayitol/', register, name="kayıt"),
+    path('giris/', loginn, name='giris'),
+    path('cikis/',logoutt,name='çıkış')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
