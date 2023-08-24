@@ -81,10 +81,10 @@ def register(request):
 def loginn(request):
     
     if request.method == "POST":
-        username = request.POST['firstname']
+        name = request.POST['firstname']
         password = request.POST['password']
     
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=name, password=password)
         
         if user is not None:
             login(request,user)
@@ -102,3 +102,31 @@ def logoutt(request):
     logout(request)
     
     return redirect('anasayfa')
+
+def profile(request):
+    
+    context = {
+    'categories' : Category.objects.all()
+        
+    }
+    
+    if request.method == "POST" and 'kaydet' in request.POST:
+        user = request.user
+        user.first_name = request.POST['firstname']
+        user.last_name = request.POST['lastname']
+        user.email = request.POST['email']
+        
+        user.save()
+        
+    if request.method == "POST" and 'post' in request.POST:
+        title = request.POST['title']
+        postText = request.POST['postText']
+        postImg = request.FILES['postImg']
+        category_id = request.POST['category']
+        
+        post = Post(title=title,postText=postText,postImg=postImg,category=category_id)
+        post.save()
+        
+        return redirect('/')
+    
+    return render(request, 'profile.html', context)

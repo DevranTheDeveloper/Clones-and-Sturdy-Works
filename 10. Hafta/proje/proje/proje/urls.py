@@ -26,5 +26,6 @@ urlpatterns = [
     path('detay/<id>/', detail, name="detaylar"),
     path('kayitol/', register, name="kayıt"),
     path('giris/', loginn, name='giris'),
-    path('cikis/',logoutt,name='çıkış')
+    path('cikis/',logoutt,name='çıkış'),
+    path('profil/', profile, name='profil')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

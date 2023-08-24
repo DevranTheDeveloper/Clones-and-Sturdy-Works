@@ -21,7 +21,7 @@ nav {
     width: 100%;
     padding: 0 20px;
     position: sticky;
-    background: white;
+    background: rgb(231, 231, 231);
     top: 0;
     z-index: 999;
 }
@@ -50,6 +50,15 @@ input {
     border-radius: 20px;
     border: transparent;
     background: rgb(211, 211, 211);
+}
+.inp {
+    background-color: rgb(238, 238, 238) !important;
+    border: transparent !important;
+    color: black;
+    font-weight: 600;
+}
+.kaydet {
+    display: none;
 }
 .sol, .sag, .orta {
     display: flex;

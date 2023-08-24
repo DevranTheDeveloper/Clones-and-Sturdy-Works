@@ -42,17 +42,17 @@
                 {% if request.user.is_authenticated %}
                 <div class="dropdown open">
                     <button class="btn dropdown-toggle" type="button" id="triggerId"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;">
                         {{request.user}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="triggerId">
-                        <button class="dropdown-item" href="">Profil</button>
-                        <button class="dropdown-item"><a href="cikis/" style="text-decoration: none; color: black;">Çıkış Yap</a></button>
+                        <a href="/profil/"><button class="dropdown-item">Profil</button></a>
+                        <a href="cikis/" style="text-decoration: none; color: black;"><button class="dropdown-item">Çıkış Yap</button></a>
                     </div>
                 </div>
                 {% else %}
                 <li><a href="/giris/" style="text-decoration: none; color: black;">Login</a></li>
-                <li><a href="/kayitol/" style="text-decoration: none; color: black;">Sign-Up</a></li>
+                <li><a href="/kayitol/" style="text-decoration: none; color: black; font-size: 20px;">Sign-Up</a></li>
                 {% endif %}
             </ul>
         </div>

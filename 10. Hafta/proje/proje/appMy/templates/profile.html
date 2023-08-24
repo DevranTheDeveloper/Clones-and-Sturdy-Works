@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body style="background: linear-gradient(to bottom, rgb(255, 240, 31), rgb(255, 165, 180))">
+    <nav>
+        <div class="sol">
+            <h1>LOGO</h1>
+        </div>
+        <div class="orta">
+            <ul>
+                <li><a href="/" style="text-decoration: none; color: black;">Home</a></li>
+                <li>Products</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li><input type="text" placeholder="Search"></li>
+                <li>
+                    <div class="dropdown open">
+                        <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Kategoriler
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            {% for i in category %}
+                            <a class="dropdown-item" href="/kategori/{{i.id}}">{{i.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sag">
+            <ul>
+                {% if request.user.is_authenticated %}
+                <div class="dropdown open">
+                    <button class="btn dropdown-toggle" type="button" id="triggerId"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;">
+                        {{request.user.first_name}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a href="/profil/"><button class="dropdown-item">Profil</button></a>
+                        <a href="/cikis/" style="text-decoration: none; color: black;"><button class="dropdown-item">Çıkış Yap</button></a>
+                    </div>
+                </div>
+                {% else %}
+                <li><a href="/giris/" style="text-decoration: none; color: black;">Login</a></li>
+                <li><a href="/kayitol/" style="text-decoration: none; color: black; font-size: 20px;">Sign-Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <section class="h-100 gradient-custom-2">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+              <div class="card">
+                <div class="rounded-top text-white d-flex flex-row" style="background-color: #ffbb00; height:200px;">
+                  <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                      alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                      style="width: 150px; z-index: 1">
+                    <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                      style="z-index: 1;" onclick="aktiflestir()">
+                      Profili Düzenle
+                    </button>
+                  </div>
+                  <div class="ms-3" style="margin-top: 130px;">
+                    <h5>{{request.user.first_name}} {{request.user.last_name}}</h5>
+                    <p>İstanbul</p>
+                  </div>
+                </div>
+                <div class="p-4 text-black" style="background-color: #f8f9fa;">
+                  <div class="d-flex justify-content-end text-center py-1">
+                    <div>
+                      <p class="mb-1 h5">253</p>
+                      <p class="small text-muted mb-0">Fotoğraflar</p>
+                    </div>
+                    <div class="px-3">
+                      <p class="mb-1 h5">1026</p>
+                      <p class="small text-muted mb-0">Takipçi</p>
+                    </div>
+                    <div>
+                      <p class="mb-1 h5">478</p>
+                      <p class="small text-muted mb-0">Takip</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4 text-black">
+                  <div class="mb-5">
+                    <p class="lead fw-normal mb-1">Hakkında</p>
+                    <form class="p-4" style="background-color: #f8f9fa;" method="POST">
+                        {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="a">İsim: </label>
+                            <input class="inp" type="text" name="firstname" id="a" disabled value="{{request.user.first_name}}" id="edit-profil">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="a">Soyisim: </label>
+                          <input class="inp" type="text" name="lastname" id="a" disabled value="{{request.user.last_name}}" id="edit-profil">
+                      </div>  
+                      <div class="col-md-6">
+                          <label for="a">Email: </label>
+                          <input class="inp" type="text" name="email" id="a" disabled value="{{request.user.email}}" id="edit-profil">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-3 kaydet" name="kaydet">Kaydet</button>
+                    </form>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <p class="lead fw-normal mb-0">Post Gönder</p>
+                  </div>
+                  <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                  <div class="row g-2">
+                        <div class="col-md-12 d-flex flex-column">
+                            <label for="postname">Başlık: </label>
+                            <input type="text" name="title" id="postname">
+                        </div>
+                        <div class="col-md-12 d-flex flex-column">
+                            <label for="postname">Açıklama: </label>
+                            <input type="text" name="postText" id="postname">
+                        </div>
+                        <div class="col-md-12 d-flex flex-column">
+                            <label for="postname">Görsel: </label>
+                            <input style="background-color: transparent;" type="file" name="postImg" id="postname">
+                        </div>
+                        <div class="col-md-12 d-flex flex-column">
+                            <select class="rounded p-1" style="width: fit-content;" name="category" id="">
+                                {% for i in categories %}
+                                <option value="{{i.id}} - 1">{{i.title}}</option>
+                                {% endfor %}
+                            </select>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-success" name="post">Post Oluştur</button>
+                    </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"></script>
+      <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>
