@@ -43,7 +43,7 @@
                 <div class="dropdown open">
                     <button class="btn dropdown-toggle" type="button" id="triggerId"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;">
-                        {{request.user}}
+                        {{request.user.first_name}}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="triggerId">
                         <a href="/profil/"><button class="dropdown-item">Profil</button></a>
@@ -60,21 +60,16 @@
     <div class="page container d-flex p-5">
         <div class="ic row d-flex justify-content-center">
             {% for i in post_tag %}
-            <a class="col-6" href="detay/{{i.id}}/" style="text-decoration: none;">
-                <div class="card mb-3 p-3 me-2 ms-2 bg-light" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{i.postImg.url}}" class="img-fluid rounded" alt="Card title">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{i.title}}</h5>
-                                <p class="card-text">{{i.postText}}</p>
-                                <p class="card-text"><small class="text-muted">{{i.postTime}}</small></p>
-                            </div>
-                        </div>
+            <a class="col-3" href="/detay/{{i.id}}/" style="text-decoration: none;">
+                <div class="card p-2" style="width: 18rem;">
+                    <h4 class="card-title">{{i.user.first_name}} {{i.user.last_name}}</h4>
+                    <img src="{{i.postImg.url}}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.title}}</h5>
+                      <p class="card-text">{{i.postText}}</p>
+                      <p class="card-text">{{i.postTime}}</p>
                     </div>
-                </div>
+                  </div>
             </a>
             {% endfor %}
         </div>

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -32,10 +33,10 @@ def detail(request, id):
     
     if request.method == "POST":
         comment = request.POST['comment'] #.get('comment') diye de kullanılır
-        comn = Comment(comment=comment, postComment=post_tag)
+        comn = Comment(comment=comment, postComment=post_tag,user=request.user)
         comn.save()
 
-        return redirect('detay' + id + '/')
+        return redirect('/detay/' + id + '/')
     context = {
         'post_tag' : post_tag,
         'category' : category,
@@ -103,12 +104,28 @@ def logoutt(request):
     
     return redirect('anasayfa')
 
+
+@login_required(login_url='/giris')
 def profile(request):
+    profil = Profil.objects.get(user_id=request.user)
     
-    context = {
-    'categories' : Category.objects.all()
+    if request.method == 'POST' and 'profil-img-btn' in request.POST:
+        filee = request.FILES['image']
         
-    }
+        profil.profileImg = filee
+        profil.save()
+    
+    if request.method == 'POST' and 'profil-img-btn' in request.POST:
+        filee = request.FILES['image']
+        
+        profil.profileImg = filee
+        profil.save()
+        
+        context = {
+            'profil' : profil
+        }
+        
+        return render(request, 'profile.html', context)
     
     if request.method == "POST" and 'kaydet' in request.POST:
         user = request.user
@@ -123,10 +140,16 @@ def profile(request):
         postText = request.POST['postText']
         postImg = request.FILES['postImg']
         category_id = request.POST['category']
+        category = Category.objects.get(pk=category_id)
         
-        post = Post(title=title,postText=postText,postImg=postImg,category=category_id)
+        post = Post(title=title,postText=postText,postImg=postImg,category=category,user=request.user)
         post.save()
         
         return redirect('/')
     
+    context = {
+    'categories' : Category.objects.all(),
+    'profil' : profil
+        
+    }
     return render(request, 'profile.html', context)

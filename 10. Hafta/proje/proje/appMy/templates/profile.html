@@ -64,9 +64,16 @@
               <div class="card">
                 <div class="rounded-top text-white d-flex flex-row" style="background-color: #ffbb00; height:200px;">
                   <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                      alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                      style="width: 150px; z-index: 1">
+                    <form class="d-flex w-100 justify-content-between" action="" method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <img src="{{profil.profileImg.url}}"
+                        alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                        style="width: 150px; z-index: 1">
+                      <div class="asd ps-2">
+                        <input name="image" type="file" style="z-index: 1; background: transparent;">
+                        <button name="profil-img-btn" type="submit" class="btn btn-success">Kaydet</button>
+                      </div>
+                    </form>
                     <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
                       style="z-index: 1;" onclick="aktiflestir()">
                       Profili Düzenle
@@ -136,7 +143,7 @@
                         <div class="col-md-12 d-flex flex-column">
                             <select class="rounded p-1" style="width: fit-content;" name="category" id="">
                                 {% for i in categories %}
-                                <option value="{{i.id}} - 1">{{i.title}}</option>
+                                <option value="{{i.id}}">{{i.title}}</option>
                                 {% endfor %}
                             </select>
                             

@@ -15,29 +15,43 @@
         </div>
         <div class="orta">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/" style="text-decoration: none; color: black;">Home</a></li>
                 <li>Products</li>
                 <li>Contact Us</li>
                 <li>About Us</li>
                 <li><input type="text" placeholder="Search"></li>
-                <li><div class="dropdown open">
-                    <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                                Kategoriler
-                            </button>
-                    <div class="dropdown-menu" aria-labelledby="triggerId">
-                        {% for i in category %}
-                        <a class="dropdown-item" href="/kategori/{{i.id}}">{{i.title}}</a>
-                        {% endfor %}
+                <li>
+                    <div class="dropdown open">
+                        <button class="btn dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Kategoriler
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            {% for i in category %}
+                            <a class="dropdown-item" href="/kategori/{{i.id}}">{{i.title}}</a>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
                 </li>
             </ul>
         </div>
         <div class="sag">
             <ul>
-                <li>Login</li>
-                <li>Sign-Up</li>
+                {% if request.user.is_authenticated %}
+                <div class="dropdown open">
+                    <button class="btn dropdown-toggle" type="button" id="triggerId"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;">
+                        {{request.user.first_name}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a href="/profil/"><button class="dropdown-item">Profil</button></a>
+                        <a href="/cikis/" style="text-decoration: none; color: black;"><button class="dropdown-item">Çıkış Yap</button></a>
+                    </div>
+                </div>
+                {% else %}
+                <li><a href="/giris/" style="text-decoration: none; color: black;">Login</a></li>
+                <li><a href="/kayitol/" style="text-decoration: none; color: black; font-size: 20px;">Sign-Up</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
